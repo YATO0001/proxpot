@@ -163,7 +163,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
    
 `]
-    let page = 1;
+   let page = 1;
 
     let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
@@ -172,8 +172,8 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 
     message.author.sendEmbed(embed).then(msg => {
 
-        msg.react('?').then( r => {
-            msg.react('?')
+        msg.react('◀').then( r => {
+            msg.react('▶')
 
 
         const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
