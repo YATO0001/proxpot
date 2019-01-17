@@ -1080,6 +1080,7 @@ client.on('message', msg => {
 }
 });
 client.on('message', message => {
+	var prefix = "!";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -1096,18 +1097,20 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction2.on("collect", r => {
+reaction1.on("collect", r => {
 message.channel.send(`Chat will delete`).then(m => m.delete(5000));
 var msg;
         msg = parseInt();
-        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
       message.channel.sendMessage("", {embed: {
         title: "`` Chat Deleted ``",
         color: 0x06DF00,
         footer: {
 
         }
-      }}).then(msg => {msg.delete(3000)});	
+      }}).then(msg => {msg.delete(3000)});
+
 })
 reaction2.on("collect", r => {
 message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
