@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: ii7MooDyツ | ii7MooDyツ'];
+    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: Mohamed | MohamedSamaYT'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -786,6 +786,21 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
  message.channel.send("**``يجب ان تكون في روم صوتي لكي تقوم بسحب العضو أليك``**")
 }
 } else {
+message.react("?")
+ }}});
+ client.on('message', message => {
+  if(!message.channel.guild) return;
+if(message.content.startsWith('!bc')) {
+if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let copy = "ZeusSHOP Community ©";
+let request = `Requested By ${message.author.username}`;
+if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
+msg.react('?')
+.then(() => msg.react('?'))
+.then(() =>msg.react('?'))
+
 let reaction1Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
 let reaction2Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
@@ -3225,33 +3240,6 @@ client.on('message', message => {
         
         message.channel.send(playersFind);
         message.delete();
-    }
-});
-client.on('message', message => {
-var prefix = "!";
-
-    if (message.author.id === client.user.id) return;
-    if (message.guild) {
-   let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
-    if (!args[1]) {
-message.channel.send("**!bc <message>**");
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField('» السيرفر :', `${message.guild.name}`)
-            .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
-            .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
     }
 });
 client.on('message',async message => {
