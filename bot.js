@@ -48,20 +48,14 @@ client.on('ready', function(){
         i = i+j;
         client.user.setGame(setGame[i],`http://www.twitch.tv/barontube`);
     }, ms);
-const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-          .setDescription(" تم أرسال الرابط برسالة خاصة ")
-           .setAuthor(client.user.username, client.user.avatarURL)
-                 .setAuthor(client.user.username, client.user.avatarURL)
-                .setFooter('طلب بواسطة: ' + message.author.tag)
-
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        
-    .setDescription(" مدة الرابط : ساعه  عدد استخدامات الرابط : 1 ")
-      message.author.sendEmbed(Embed11)
-    }
+    console.log(` ????????? |> Name: ${client.user.username}`);
+ console.log(` ????????? |> Servers: ${client.guilds.size}`);
+ console.log(` ???????????????????? |> Members: ${client.users.size}`);
+ console.log(` ????????????????????? |> Channels: ${client.channels.size}`);
+ console.log(` ???????????????????? |> Channels: ${client.channels.size}`);
+ console.log(` ???????????????????? |> Id: ${client.user.id}`);
+ console.log(` ???????????????????`);
+ console.log(` ???????????????????`);
 });
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
