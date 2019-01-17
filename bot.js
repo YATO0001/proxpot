@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594'];
+const devs = ['511509244315697152'];
 const db = require('quick.db');
-const premium = ['470896018603376640']
+const premium = ['511509244315697152']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -163,6 +163,25 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
    
 `]
+
+client.on('ready', function(){
+  client.user.setStatus("dnd");
+    var ms = 40000 ;	
+    var setGame = ['!inv','!help',By:ii7mody'];	
+    var i = -1;	
+    var j = 0;	
+    setInterval(function (){	
+        if( i == -1 ){	
+j = 1;	
+       }	
+        if( i == (setGame.length)-1 ){	
+            j = -1;	
+      }	
+       i = i+j;	
+        client.user.setGame(setGame[i],`https://www.twitch.tv/directory/game/Fortnite`);	
+}, ms);	
+	
+});
     let page = 1;
 
     let embed = new Discord.RichEmbed()
@@ -362,6 +381,17 @@ return;
 }
 
 });
+client.on('message', message => {
+        if (message.content === "!inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond: click here `)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot`)
+        .setThumbnail("https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot")        
+     message.channel.sendEmbed(embed);
+       }
+   });
 client.on('message', msg => {
  if (msg.content.startsWith(prefix + 'cal')) {
     let args = msg.content.split(" ").slice(1);
