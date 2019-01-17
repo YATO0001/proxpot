@@ -1087,7 +1087,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 let request = `Requested By ${message.author.username}`;
 message.channel.send(`**Are You sure you want to clear the chat?**`).then(msg => {
-msg.react('?')
+msg.react('✅')
 .then(() => msg.react('❌'))
 .then(() =>msg.react('✅'))
 
