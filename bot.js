@@ -1112,7 +1112,14 @@ var msg;
       }}).then(msg => {msg.delete(3000)});
 
 })
+reaction2.on("collect", r => {
+message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
+msg.delete();
 })
+})
+}
+});
+
 reaction2.on("collect", r => {
 message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
 msg.delete();
