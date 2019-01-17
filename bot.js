@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By:ii7MooDyツ'];
+    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By:ii7MooDyツ,#4207'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -183,7 +183,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
         const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
         const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
 
-	
+
 
         backwards.on('collect', r => {
             if (page === 1) return;
@@ -204,6 +204,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     })
     }
 }); 
+
 const credits = JSON.parse(fs.readFileSync("./creditsCode.json", "utf8"));
 const coolDown = new Set();
 
@@ -228,18 +229,6 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
 message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
-
-client.on('message', message => {
-        if (message.content === "!inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot`)
-        .setThumbnail("https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot")        
-     message.channel.sendEmbed(embed);
-       }
-   });
 
 client.on('message', async message => {
     let amount = 250;
@@ -267,48 +256,6 @@ client.on('message', async message => {
     }
 });
 
-const invites = {};
-
-const wait = require('util').promisify(setTimeout);
-
-client.on('ready', () => {
-  wait(1000);
-
-  client.guilds.forEach(g => {
-    g.fetchInvites().then(guildInvites => {
-      invites[g.id] = guildInvites;
-    });
-  });
-});
-
-client.on('message', message => {
-var prefix = "!";
-
-if (message.author.id === client.user.id) return;
-    if (message.guild) {
-   let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
-    if (!args[1]) {
-message.channel.send("**!bc <message>**");
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField('» السيرفر :', `${message.guild.name}`)
-            .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
-            .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
-    }
-});
-
 client.on('message', message => {
      if(!message.channel.guild) return;
                 if(message.content.startsWith(prefix + 'allbots')) {
@@ -326,6 +273,7 @@ ${botssize.join('\n')}`)
 message.channel.send(embed)
 
 }
+
 
 });
 client.on('message', function(msg) {
@@ -367,7 +315,22 @@ client.on('message', function(msg) {
     })
 }
 });
-
+ client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='G.count')
+	 
+      message.reply(`**${message.guild.memberCount}**`);
+    });
+    client.on('message', message => {
+   if(message.content.startsWith(prefix + "invites")) {
+    message.guild.fetchInvites().then(invs => {
+      let user = message.mentions.users.first() || message.author
+      let personalInvites = invs.filter(i => i.inviter.id === user.id);
+      let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
+message.channel.send(`${user} has ${inviteCount} invites.`);
+});
+  }
+});
  client.on("message", async message => {
             if(!message.channel.guild) return;
              if(message.content.startsWith(prefix + 'invite-codes')) {
@@ -399,6 +362,35 @@ return;
 }
 
 });
+
+client.on('message', message => {
+var prefix = "!";
+
+if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc') {
+    if (!args[1]) {
+message.channel.send("**!bc <message>**");
+return;
+}
+        message.guild.members.forEach(m => {
+   if(!message.member.hasPermission('ADMINISTRATOR')) return;
+            var bc = new Discord.RichEmbed()
+            .addField('» السيرفر :', `${message.guild.name}`)
+            .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+            .addField(' » الرسالة : ', args)
+            .setColor('#ff0000')
+            // m.send(`[${m}]`);
+            m.send(`${m}`,{embed: bc});
+        });
+    }
+    } else {
+        return;
+    }
+});
+
 client.on('message', msg => {
  if (msg.content.startsWith(prefix + 'cal')) {
     let args = msg.content.split(" ").slice(1);
@@ -1077,7 +1069,6 @@ client.on('message', msg => {
 }
 });
 client.on('message', message => {
-	var prefix = "!";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -1085,12 +1076,12 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 let request = `Requested By ${message.author.username}`;
 message.channel.send(`**Are You sure you want to clear the chat?**`).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
+msg.react('?')
+.then(() => msg.react('?'))
+.then(() =>msg.react('?'))
 
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
 
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
@@ -2608,6 +2599,21 @@ client.on('messageUpdate', (oldRebel, newRebel) => {
            newRebel.author.send("ممنوع روآبط الدسكورد. \n إذآ كنت تريد النشر توآصل من الإدآرة.");
     }
 });
+
+client.on('message', message => {
+        if (message.content === "!inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond: click here `)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot`)
+        .setThumbnail("https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot")        
+     message.channel.sendEmbed(embed);
+       }
+   });
+   
+
+   
 const invites = {};
 const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
