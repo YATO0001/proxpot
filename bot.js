@@ -345,6 +345,130 @@ hours = 12;
   }
 });
 client.on('message', message => {
+    if(message.content == ('!profile')) {    
+ 
+             if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');   
+            var Canvas = module.require('canvas');
+            var jimp = module.require('jimp');
+    
+     const w = ['ID1.png','ID2.png','ID3.png','ID4.png','ID5.png'];
+    
+             let Image = Canvas.Image,
+                 canvas = new Canvas(802, 404),
+                 ctx = canvas.getContext('2d');
+             ctx.patternQuality = 'bilinear';
+             ctx.filter = 'bilinear';
+             ctx.antialias = 'subpixel';
+             ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+             ctx.shadowOffsetY = 2;
+             ctx.shadowBlur = 2;
+             fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                 if (err) return console.log(err);
+                 let BG = Canvas.Image;
+                 let ground = new Image;
+                 ground.src = Background;
+                 ctx.drawImage(ground, 0, 0, 802, 404);
+    
+     })
+                                let user = message.mentions.users.first();
+          var men = message.mentions.users.first();
+             var heg;
+             if(men) {
+                 heg = men
+             } else {
+                 heg = message.author
+             }
+           var mentionned = message.mentions.members.first();
+              var h;
+             if(mentionned) {
+                 h = mentionned
+             } else {
+                 h = message.member
+             }
+             var ment = message.mentions.users.first();
+             var getvalueof;
+             if(ment) {
+               getvalueof = ment;
+             } else {
+               getvalueof = message.author;
+             }//ما خصك ,_,
+                                           let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
+                                             jimp.read(url, (err, ava) => {
+                                                 if (err) return console.log(err);
+                                                 ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                                                     if (err) return console.log(err);
+                            
+                                                             let Avatar = Canvas.Image;
+                                                             let ava = new Avatar;
+                                                             ava.src = buf;
+                                                             ctx.beginPath();
+                                                           ctx.drawImage(ava, 335, 3, 160, 169);
+                                                     ctx.font = '35px Arial Bold';
+                                                     ctx.fontSize = '40px';
+                                                     ctx.fillStyle = "#dadada";
+                                                     ctx.textAlign = "center";
+                                                    
+                            
+                                                     ctx.font = '30px Arial Bold';
+                                                     ctx.fontSize = '30px';
+                                                     ctx.fillStyle = "#ffffff";
+                                                                             ctx.fillText(`${getvalueof.username}`,655, 170);
+                                                                            
+                                                                        
+                                                          moment.locale('ar-ly');        
+                                            
+                                            
+                                                                    ctx.font = '30px Arial';
+                                                     ctx.fontSize = '30px';
+                                                     ctx.fillStyle = "#ffffff";
+                                                                             ctx.fillText(`${moment(h.joinedAt).fromNow()}`,150, 305);
+                                                              
+                                                              
+                                                                                                     ctx.font = '30px Arial';
+                                                     ctx.fontSize = '30px';
+                                                     ctx.fillStyle = "#ffffff";
+                                                                 ctx.fillText(`${moment(heg.createdTimestamp).fromNow()}`,150, 170); 
+                            
+                                                       let status;
+     if (getvalueof.presence.status === 'online') {
+         status = 'Online';
+     } else if (getvalueof.presence.status === 'dnd') {
+         status = 'dnd';
+     } else if (getvalueof.presence.status === 'idle') {
+         status = 'idle';
+     } else if (getvalueof.presence.status === 'offline') {
+         status = 'offline';
+     }
+     
+     
+                                          ctx.cont = '35px Arial';
+                                          ctx.fontSize = '30px';
+                                          ctx.filleStyle = '#ffffff'
+                                          ctx.fillText(`${status}`,655,305)
+                  
+                                                                   ctx.font = 'regular 30px Cairo';
+                                                                   ctx.fontSize = '30px';
+                                                                   ctx.fillStyle = '#ffffff'
+                                                         ctx.fillText(`${h.presence.game === null ? "No playing" : h.presence.game.name}`,390,390);
+                            
+                               ctx.font = '35px Arial';
+                                                                   ctx.fontSize = '30px';
+                                                                   ctx.fillStyle = '#ffffff'
+                                                                   ctx.fillText(`#${heg.discriminator}`,390,260)
+                            
+                                 ctx.beginPath();
+                                 ctx.stroke();
+                               message.channel.sendFile(canvas.toBuffer());
+                            
+                            
+                          
+                            
+                             })
+                            
+                             })
+ }
+ });
+client.on('message', message => {
      if(!message.channel.guild) return;
                 if(message.content.startsWith(prefix + 'allbots')) {
 
@@ -395,6 +519,33 @@ client.on('message', function(msg) {
       .addField('`Server was created in`',msg.guild.createdAt.toLocaleString())
       msg.channel.send({embed:embed})
     }
+});
+antispam(client, {
+  warnBuffer: 3, //الحد الأقصى المسموح به من الرسائل لإرسالها في الفاصل الزمني قبل الحصول على تحذير.
+  maxBuffer: 5, // الحد الأقصى المسموح به من الرسائل لإرسالها في الفاصل الزمني قبل الحصول على ميوت.
+  interval: 1000, // مقدار الوقت قبل حصول باند
+  warningMessage: "*** بطل سبام ***", // رسالة تحذير اذا سوا سبام!
+  roleMessage: "***مبروك على الميوت يا بتاع السبام***", // الرسالة الي تجي اذا شخص اخذ ميوت
+  roleName: "Muted", // اسم رتبة الميوت
+  maxDuplicatesWarning: 7, // عدد الرسايل الي قبل التحذيرات
+  maxDuplicatesBan: 10, // عدد الرسايل الي يقدر المستخدم يرسلها قبل الميوت
+  time: 10, // عدد الوقت الي يجلس لين تسحب رتبة الميوت من الشخص الحسبة برمجية وليست كتابية
+});
+client.on('message' , async (message) => {
+ if (message.content.startsWith(prefix + 'w')) {
+  const args = message.content.substring(prefix.length).split(' ');
+
+ message.delete();
+args.shift() 
+let msg = args.join(' ') 
+message.channel.createWebhook(message.author.username, message.author.avatarURL) 
+    .then(wb => {
+        const user = new Discord.WebhookClient(wb.id, wb.token) 
+        user.send(msg); 
+        user.delete() 
+    })
+    .catch(console.error)
+ }
 });
  client.on('message', message => {
     if (message.content.startsWith(prefix + "bot")) {
