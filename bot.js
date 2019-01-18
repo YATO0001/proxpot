@@ -609,7 +609,9 @@ if (message.content.startsWith(prefix + 'perms')) {
 
   let args = message.content.split(" ").slice(1);
   
- 
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("member","member"));
+    }); 
 
 if (command == "z5rf") {
     let say = new Discord.RichEmbed()
