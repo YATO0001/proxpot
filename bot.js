@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594'];
+const devs = ['489700188202729472'];
 const db = require('quick.db');
-const premium = ['470896018603376640']
+const premium = ['489700188202729472']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -229,25 +229,7 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
 message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
-client.on('message', message => {
-	 var prefix = "!";
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
 
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-  
- 
-
-if (command == "za5") {
-    let say = new Discord.RichEmbed()
-        .setTitle('Text emboss :')
-   message.channel.send(`\n ${zalgo(args.join(' '))}`);
-  }
-
-});
 client.on('message', async message => {
     let amount = 250;
     if(message.content.startsWith(prefix + "daily")) {
@@ -273,21 +255,6 @@ client.on('message', async message => {
     },86400000);
     }
 });
-client.on('message', message => {
-  const port = '25565'
-  if(message.content.startsWith('!mcstats')) {
- const args = message.content.split(" ").slice(1).join(" ")
-    if (!args) return message.channel.send("** Write Server IP . **");
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(`https://api.minetools.eu/favicon/${args}/25565`)
-        .addField("📜 Server NIP",`${args}`,true)
-        .addField("🌐 Server Port",`${port}`)
-        .setImage(`http://status.mclive.eu/${args}/${args}/25565/banner.png`)
-        .setFooter(`McStats`)
-                .setTimestamp()
-    message.channel.send(embed)      
-}})
 client.on('message',async message => {
     const moment = require('moment');
 const ms = require('ms')
@@ -395,6 +362,8 @@ message.channel.send(embed)
 
 }
 
+
+});
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "all")) {
     let i = client.users.size;
@@ -640,9 +609,7 @@ if (message.content.startsWith(prefix + 'perms')) {
 
   let args = message.content.split(" ").slice(1);
   
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("member","member"));
-    }); 
+ 
 
 if (command == "z5rf") {
     let say = new Discord.RichEmbed()
@@ -3175,12 +3142,6 @@ client.on('message', async message => {
       message.channel.send(iNv);
     });
   }
-});
-client.on('guildCreate', guild => {
-  var embed = new Discord.RichEmbed()
-  .setColor(0x5500ff)
-  .setDescription(`** شكراً لك لإضافه البوت الى سيرفرك الرجاء الوجه الي سيرفر الدعم الفني https://discord.gg/YK3angm **`)
-      guild.owner.send(embed)
 });
 client.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
