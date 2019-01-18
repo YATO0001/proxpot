@@ -395,14 +395,6 @@ message.channel.send(embed)
 
 }
 
-
-});
-client.on('guildCreate', guild => {
-  var embed = new Discord.RichEmbed()
-  .setColor(0x5500ff)
-  .setDescription(`** شكراً لك لإضافه البوت الى سيرفرك الرجاء الوجه الي سيرفر الدعم الفني https://discord.gg/YK3angm **`)
-      guild.owner.send(embed)
-});
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "all")) {
     let i = client.users.size;
@@ -3183,6 +3175,12 @@ client.on('message', async message => {
       message.channel.send(iNv);
     });
   }
+});
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor(0x5500ff)
+  .setDescription(`** شكراً لك لإضافه البوت الى سيرفرك الرجاء الوجه الي سيرفر الدعم الفني https://discord.gg/YK3angm **`)
+      guild.owner.send(embed)
 });
 client.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
