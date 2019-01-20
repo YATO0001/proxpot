@@ -33,10 +33,15 @@ var ti={}
 ,spee={}
 ,attentions={};
 
-const credits = JSON.parse(fs.readFileSync("./creditsCode.json", "utf8"));
-const coolDown = new Set();
+const cool = [];
+client.on('message',async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === 'dm') return;
 
- const mention = message.mentions.users.first() || client.users.get(args[1]) || message.author;
+  const args = message.content.split(' ');
+  const credits = require('./credits.json');
+  const path = './credits.json';
+  const mention = message.mentions.users.first() || client.users.get(args[1]) || message.author;
   const mentionn = message.mentions.users.first() || client.users.get(args[1]);
   const author = message.author.id;
   const balance = args[2];
