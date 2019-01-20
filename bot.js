@@ -231,7 +231,7 @@ client.on('ready', () => {//لا تغير شي هنا
                       role.edit({color : "RANDOM"});//Codes Server
                   };
       });//Codes Server
-  }, 5000);//سرعه تغير الالوان
+  }, 1000);//سرعه تغير الالوان
 })//Codes Server
 
 client.login(process.env.BOT_TOKEN)
