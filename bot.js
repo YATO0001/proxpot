@@ -206,32 +206,15 @@ client.on('message', async message => {
     });
   }
 });
-client.on('message', message => {
-if(!message.channel.guild) return;
-  if(message.content.startsWith(prefix + 'sr')) {
-      let role = message.guild.roles.find('name', 'Rainbow ')
-    if(role) return message.channel.send(`يوجد بلفعل رتبه موجوده ضع البوت فوق الرتبه`)
-  if(!role){
-    rainbow =  message.guild.createRole({
-   name: "Rainbow ",//اسم الرتبه 
-   color: "#000000",//الون الاساسي للرنبو 
-   permissions:[]//الرتبه المسموح بيها للرنبو  مثال MANAGE_ROLES ADMINISTRATOR   
- //نهايه الكود هنا
-})
-
-}
-message.channel.send('تم اعداد رتبه الرنبو بنجاح 🌈')//if the step completed
-}})
-
-client.on('ready', () => {//لا تغير شي هنا
-  setInterval(function(){//Codes Server
-      client.guilds.forEach(g => {//Codes Server
-                  var role = g.roles.find('name', 'Rainbow ');//اسم رتبه رنبو 
-                  if (role) {//Codes Server
-                      role.edit({color : "RANDOM"});//Codes Server
-                  };
-      });//Codes Server
-  }, 1000);//سرعه تغير الالوان
-})//Codes Server
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    invites[member.guild.id] = guildInvites;
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const logChannel = member.guild.channels.find(channel => channel.name === "welcome");
+    logChannel.send(`${member} Invited by: <@${inviter.id}>`);
+  });
+});
 
 client.login(process.env.BOT_TOKEN)
