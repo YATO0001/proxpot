@@ -275,7 +275,7 @@ if (message.content.startsWith(prefix + 'setgame')) {
 
 
 
-});
+
 
 });
 client.on('message', async message => {
