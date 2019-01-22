@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['511509244315697152'];
+const devs = ['477493408370524181'];
 const db = require('quick.db');
-const premium = ['511509244315697152']
+const premium = ['477493408370524181']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -234,7 +234,7 @@ message.channel.send(embed)
 
 }
 
-  if (message.author.id !== "511509244315697152") return;
+  if (message.author.id !== "477493408370524181") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
