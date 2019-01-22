@@ -281,7 +281,7 @@ if (message.content.startsWith(prefix + 'setgame')) {
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "all")) {
     let i = client.users.size;
-    if(message.author.id !== '511509244315697152') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
+    if(message.author.id !== '477493408370524181') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
     var args = message.content.split(' ').slice(1).join(' ');
     if(!args) return message.channel.send('❎ » يجب عليك كتابة الرسالة')
     setTimeout(() => {
