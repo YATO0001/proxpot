@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['477493408370524181'];
+const devs = ['537147937583529994'];
 const db = require('quick.db');
-const premium = ['477493408370524181']
+const premium = ['537147937583529994']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -68,7 +68,7 @@ client.on('message',async message => {
     var number = `${one}${two}${three}${four}`;
     
     message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار**`).then(m => {
-      message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
+      message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000000000}).then(c => {
         if(c.first().content === number) {
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
@@ -281,7 +281,7 @@ if (message.content.startsWith(prefix + 'setgame')) {
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "all")) {
     let i = client.users.size;
-    if(message.author.id !== '477493408370524181') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
+    if(message.author.id !== '537147937583529994') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
     var args = message.content.split(' ').slice(1).join(' ');
     if(!args) return message.channel.send('❎ » يجب عليك كتابة الرسالة')
     setTimeout(() => {
