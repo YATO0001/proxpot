@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = '!';
+const prefix = '+';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -278,7 +278,7 @@ hours = 12;
 client.on("message", msg => { //Narox Dev
     if(msg.author.bot) return;
     if(msg.channel.type === 'dm') return;
-  let prefix = '!'; //البرفكس
+  let prefix = '+'; //البرفكس
   let msgarray = msg.content.split(" ");
   let cmd = msgarray[0];
   let args = msgarray.slice(1);
