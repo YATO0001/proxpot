@@ -282,7 +282,7 @@ client.on("message", msg => { //Narox Dev
   let msgarray = msg.content.split(" ");
   let cmd = msgarray[0];
   let args = msgarray.slice(1);
-  if(cmd === `${prefix}warn`){//الامر
+  if(cmd === `${prefix}war`){//الامر
     
     
   
@@ -330,7 +330,7 @@ message.channel.send(embed)
 
 }
 
-  if (message.author.id !== "477493408370524181") return;
+  if (message.author.id !== "537147937583529994") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
