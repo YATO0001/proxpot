@@ -187,7 +187,7 @@ client.on('message',async message => {
   }
 });
 client.on('message', message => {
-            if (message.content.startsWith(">قوانين")) {
+            if (message.content.startsWith("قوانين")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **اولا** ' ,' **ممنوع السب** ')
