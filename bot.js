@@ -203,8 +203,6 @@ client.on('message',async message => {
     }, ms("1d"));
   }
 });
-  ];
-
 client.on('message',  message => {
   if(bannedwords.some(word => message.content.includes(word))) {
     message.delete()
