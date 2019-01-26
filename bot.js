@@ -501,12 +501,6 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
   }
 
 });
-client.on('message',  message => {
-  if(bannedwords.some(word => message.content.includes(word))) {
-    message.delete()
-    message.reply(" احترم نفسك , يمنج الشتايم تمامنا هنا  ").then(msg => {msg.delete(5000)});;
-  };
-});
 client.on('message', message => {
             if (message.content.startsWith("قوانين")) {
      let embed = new Discord.RichEmbed()
