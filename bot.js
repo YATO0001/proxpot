@@ -67,7 +67,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -83,7 +83,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -99,7 +99,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -115,7 +115,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -131,7 +131,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -147,7 +147,23 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('يناك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -163,7 +179,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -179,7 +195,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -195,7 +211,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -211,7 +227,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -227,7 +243,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -243,7 +259,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -259,7 +275,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -275,7 +291,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
