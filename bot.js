@@ -203,32 +203,6 @@ client.on('message',async message => {
     }, ms("1d"));
   }
 });
-const bannedwords = [
-    "كسمك",
-    "ياحمار",
-    "حمار",
-    "زق",
-    "زك",
-    "نيك",
-    "يلعن دين امك",
-    "يا بن النتناكه",
-    "يا ابن الوسخه",
-    "ياشرموط",
-    "ياخول"
-    "هنيكك ياوسخ",
-    "وسخ",
-    "الله يلعنك",
-    "يابن القحبه",
-
-  ];
-
-client.on('message',  message => {
-  if(bannedwords.some(word => message.content.includes(word))) {
-    message.delete()
-    message.reply(" احترم نفسك , يمنج الشتايم تمامنا هنا  ").then(msg => {msg.delete(5000)});;
-  };
-});
-
   ];
 
 client.on('message',  message => {
