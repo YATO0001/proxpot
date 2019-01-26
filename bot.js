@@ -50,6 +50,238 @@ j = 1;
 }, ms);    
     
 });
+client.on('message', msg => {
+    if (msg.content === 'هلا') {
+       msg.reply('هلابيك:heart: ');
+      }
+    });
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('كسمك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('نيك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('عرص')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('متناك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('احا')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('ينيكك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('حمار')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('خرا')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('زق')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('زك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes(':poop:')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('a7a')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('كوسمك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('خول')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "ii7MooDy    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
+        }
+      }}).then(msg => {msg.delete(10000)});
+                          }
+ 
+     
+});
 const cool = [];
 client.on('message',async message => {
   if(message.author.bot) return;
