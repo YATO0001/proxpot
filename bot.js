@@ -326,6 +326,17 @@ if(!message.channel.guild) return;
 message.channel.send('Done The Rainbow Role Setup Has Been Completed')//if the step completed
 }})
 
+client.on('ready', () => {//new ready event
+  setInterval(function(){
+      client.guilds.forEach(g => {
+                  var role = g.roles.find('name', 'Rainbow Quick.');//rainbow role name
+                  if (role) {
+                      role.edit({color : "RANDOM"});
+                  };
+      });
+  }, 5000);//the rainbow time
+})
+
 client.on('message', async message =>{
 const ms = require("ms");
 if (message.author.omar) return;
