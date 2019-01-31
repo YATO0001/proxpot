@@ -35,7 +35,7 @@ var ti={}
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;    
-    var setGame = ['ProxBot'];    
+    var setGame = ['DragonBot'];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
