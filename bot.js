@@ -32,24 +32,7 @@ var table = require('table').table
 var ti={}  
 ,spee={}
 ,attentions={};
-client.on('ready', function(){
-  client.user.setStatus("dnd");
-    var ms = 40000 ;    
-    var setGame = ['DragonBot'];    
-    var i = -1;    
-    var j = 0;    
-    setInterval(function (){    
-        if( i == -1 ){    
-j = 1;    
-       }    
-        if( i == (setGame.length)-1 ){    
-            j = -1;    
-      }    
-       i = i+j;    
-        client.user.setGame(setGame[i],`http://www.youtube.com/gg`);    
-}, ms);    
-    
-});
+
 client.on('message', msg => {
     if (msg.content === 'هلا') {
        msg.reply('هلابيك:heart: ');
