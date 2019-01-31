@@ -219,22 +219,6 @@ client.on('message', message => {
      
 });
 client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('زك')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تسب",
-        color: 0x06DF00,
-        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
-        footer: {
-          text: "ii7MooDy    [ ii7MooDy#0001      -     W???AR NI???GH??T?#4506 ]"
-        }
-      }}).then(msg => {msg.delete(10000)});
-                          }
- 
-     
-});
-client.on('message', message => {
        if (message.content.startsWith(prefix + 'botserver')) {
      let msg =  client.guilds.map(guild => `**${guild.name}** عدد الاعضاء: ${guild.memberCount}`).join('\n');
   let embed = new Discord.RichEmbed()
