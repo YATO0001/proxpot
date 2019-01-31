@@ -54,7 +54,7 @@ client.on('message', msg => {
     if (msg.content === 'هلا') {
        msg.reply('هلابيك:heart: ');
       }
-    });
+    
 
 
 
